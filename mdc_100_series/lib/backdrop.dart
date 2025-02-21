@@ -94,7 +94,7 @@ class _BackdropTitle extends AnimatedWidget {
           width: 72.0,
           child: IconButton(
             padding: const EdgeInsets.only(right: 8.0),
-            onPressed: this.onPress,
+            onPressed: onPress,
             icon: Stack(children: <Widget>[
               Opacity(
                 opacity: animation.value,
@@ -164,6 +164,7 @@ class _BackdropState extends State<Backdrop>
     );
 
   }
+  @override
   void didUpdateWidget(Backdrop old) {
     super.didUpdateWidget(old);
 
@@ -259,7 +260,7 @@ class _BackdropState extends State<Backdrop>
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (BuildContext context) => LoginPage()),
+                  builder: (BuildContext context) => const LoginPage()),
             );
           },
         ),
@@ -273,7 +274,7 @@ class _BackdropState extends State<Backdrop>
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (BuildContext context) => LoginPage()),
+                  builder: (BuildContext context) => const LoginPage()),
             );
           },
         ),
